@@ -36,5 +36,9 @@ function setTheme(mode){
 		document.getElementById('theme-style').href = 'purple.css'
 	}
 
+	if(mode == 'green2'){
+		document.getElementById('theme-style').href = 'green2.css'
+	}
+
 	localStorage.setItem('theme', mode)
 }

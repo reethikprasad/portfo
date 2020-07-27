@@ -11,10 +11,22 @@
 
 	--previewBg:rgb(251, 249, 243, 0.8);
 	--previewShadow:#f0ead6;
-
+    --main-texx: #8C897E;
 
 	--buttonColor:black;
 
+    
+	--previewBg: rgb(251, 249, 243, 0.8);
+    --previewShadow: #c4c1b7;
+    --mainShadow: 20px 20px 60px #4b4b4b, 
+             -20px -20px 60px #424242;
+    --mainRadius: 5px 5px 0 0;
+
+
+	
+	--secondaryShadow:  14px 14px 12px #f7f7f7, 
+             -14px -14px 12px #ffffff;
+	--secondaryRadius: 5px;;
 
 }
 
@@ -30,7 +42,14 @@ body *{
 	transition: 0.3s;
 }
 
-h1, h2, h3, h4, h5, h6, strong{
+
+h1{
+    color: var(--mainText);
+    font-weight: 500;
+    
+    font-family: 'Indie Flower', cursive;
+}
+ h2, h3, h4, h5, h6, strong{
 	color: var(--mainText);
 	font-family: 'Russo One', sans-serif;
 	font-weight: 500;
@@ -84,21 +103,18 @@ h6 { font-size: 16px;}
 }
 
 .intro-wrapper{
-    background-color: var(--secondaryColor);
-	border:1px solid var(--borderColor);
-	border-radius:5px 5px 0 0;
+    background-color: var(--mainColor);
 
-
-	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-    
+	border-radius: var(--mainRadius);
+	border: 1px var(--borderColor);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3em 30em;
     grid-template-areas: 
-        'nav-wrapper nav-wrapper' 
-        'left-column right-column';
+    'nav-wrapper nav-wrapper'
+    'left-column right-column';
+    -webkit-box-shadow: -1px 2px 26px -8px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 2px 26px -8px rgba(0,0,0,0.75);
+box-shadow: -1px 2px 26px -8px rgba(0,0,0,0.75);
 }
 
 .nav-wrapper{
@@ -165,6 +181,11 @@ h6 { font-size: 16px;}
 	background-color: #7E4C74;
 }
 
+#green-mode2{
+	background-color: #a6e7ba;
+}
+
+
 #settings-note{
     font-style: italic;
     text-align: center;
@@ -230,22 +251,23 @@ h6 { font-size: 16px;}
 
 #preview-shadow{
     background-color: var(--previewShadow);
-	max-width: 300px;
-	height:200px;
+	border-radius: 50% 20% / 10% 40%;
+	width: 300px;
+	height: 180px;
 	padding-left: 30px;
 	padding-top: 30px;
 }
 
 #preview{
     width: 300px;
-	border:1.5px solid #17a2b8;
 	background-color: var(--previewBg);
-    padding:15px;
-    position: relative;
+	border-radius: 50% 20% / 10% 40%;
+	padding: 15px 25px;
+	position: relative;
     
 }
 
-.corner{
+/* .corner{
     height: 7px;
     width: 7px;
     border-radius: 50%;
@@ -269,7 +291,7 @@ h6 { font-size: 16px;}
 #corner-bl{
     bottom: -5px;
     left: -5px;
-}
+} */
 
 
 .about-wrapper{
