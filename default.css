@@ -428,5 +428,6 @@ box-shadow: -1px 2px 26px -8px rgba(0,0,0,0.75);
 
     .right-column{
         justify-content: center;
+        margin-right: auto;
     }
 }
